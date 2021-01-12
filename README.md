@@ -28,9 +28,8 @@ We will be using `Precision_Score(Macro)` as the Evaluation Metric to judge our 
   1. While performing Exploratory Data Analysis, we found that the given data is highly unbalanced with **97% positive reviews** w.r.t to just **3% negative reviews.**
 
   <img src="sentiments_distribution.PNG" width=400 height=300 />
-  <br>
   As noticed from the above distribution graph, the dataset is highly unbalanced and we will need to balance the data to overcome biasness.
-
+  <br><br>
 
   **2.	Vectorizing the Categorical Variable**
   
@@ -38,8 +37,8 @@ We will be using `Precision_Score(Macro)` as the Evaluation Metric to judge our 
   It will convert the collection of text tokens in 'text' column, and return a matrix of the counts of occurrences of each token in the Series
   After Vectorizing, we observed the below dataset with mentioned shapes-
 
-  <img src="data_shapes.PNG" width=400 height=200 /> 
-  <br>
+  <img src="data_shapes.PNG" width=450 height=150 /> 
+  <br><br>
 
   **3.	Over-Sampling**
   
@@ -59,6 +58,8 @@ We will be using `Precision_Score(Macro)` as the Evaluation Metric to judge our 
   |Decision Tree Classifier |76.03 %        |76.46 %             |54.46 %                |
   |Random Forest Classifier |81.28 %        |73.61 %             |54.80 %                |
 
+  <br>
+  
   **5..	Metrics Comparison & Generating Predictions**
   
   As we can observe that, `XGBClassifier` gives better `Accuracy Score of 98.97%`, `Recall Score(Macro) of 84.62%` and `Precison Score(Macro) of 99.48%`.<br>
