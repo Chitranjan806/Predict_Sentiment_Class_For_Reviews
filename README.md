@@ -33,7 +33,8 @@ We will be using `Precision_Score(Macro)` as the Evaluation Metric to judge our 
 
 
   **2.	Vectorizing the Categorical Variable**
-  As we know, all the ML models are good with numbers. So, we will convert the categorical column `'text'` using **CountVectorizer.**
+  
+  As we know, all the ML models are good with numbers. So, we will convert the categorical column `'text'` using **CountVectorizer.**<br>
   It will convert the collection of text tokens in 'text' column, and return a matrix of the counts of occurrences of each token in the Series
   After Vectorizing, we observed the below dataset with mentioned shapes-
 
@@ -41,39 +42,24 @@ We will be using `Precision_Score(Macro)` as the Evaluation Metric to judge our 
   <br>
 
   **3.	Over-Sampling**
-  To predict if the review is negative or positive accurately, we need the data to be balanced enough to predict the correct category of the review.
+  
+  To predict if the review is negative or positive accurately, we need the data to be balanced enough to predict the correct category of the review.<br>
   **To optimize this imbalanced data, we will perform over-sampling using `ADASYN (Adaptive Synthetic Sampling Approach)`**
 
 
-  **4..	Model Building**
+  **4.	Model Building**
+  
   We have used 5 different classification machine learning algorithms as mentioned below with obtained scores.
 
-  ####  i. Support Vector Classifier
-  - Accuracy score :  94.87 %
-  - Recall_score(Macro) :  49.07 %
-  - Precision_Score(Macro) :  48.3 %
-
-  ####  ii. Cat Boost Classifier
-  - Accuracy score :  88.08 %
-  - Recall_score(Macro) :  73.41 %
-  - Precision_Score(Macro) :  56.93 %
-
-  ####  iii. XGB Classifier
-  - Accuracy score :  98.97 %
-  - Recall_score(Macro) :  84.62 %
-  - Precision_Score(Macro) :  99.48 %
-
-  ####  iv. Decision Tree Classifier
-  - Accuracy score :  76.03 %
-  - Recall_score(Macro) :  76.46 %
-  - Precision_Score(Macro) :  54.46 %
-
-  ####  v. Random Forest Classifier
-  - Accuracy score :  81.28 %
-  - Recall_score(Macro) :  73.61 %
-  - Precision_Score(Macro) :  54.8 %
-
+  |Algorithm                |Accuracy score |Recall score(macro) |Precision score(macro) |
+  |:------------------------|--------------:|-------------------:|----------------------:|
+  |Support Vector Classifier|94.87 %        |49.07 %             |48.30 %                |
+  |Cat Boost Classifier     |88.08 %        |73.41 %             |56.93 %                |
+  |XGB Classifier           |98.97 %        |84.62 %             |99.48 %                |
+  |Decision Tree Classifier |76.03 %        |76.46 %             |54.46 %                |
+  |Random Forest Classifier |81.28 %        |73.61 %             |54.80 %                |
 
   **5..	Metrics Comparison & Generating Predictions**
-  As we can observe that, `XGBClassifier` gives better `Accuracy Score of 98.97%`, `Recall Score(Macro) of 84.62%` and `Precison Score(Macro) of 99.48%`.
+  
+  As we can observe that, `XGBClassifier` gives better `Accuracy Score of 98.97%`, `Recall Score(Macro) of 84.62%` and `Precison Score(Macro) of 99.48%`.<br>
   Let's continue with generating our final predictions on the Test data using <b>XGBClassifier</b> itself.
