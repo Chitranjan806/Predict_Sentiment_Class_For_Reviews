@@ -37,7 +37,7 @@ We will be using `Precision_Score(Macro)` as the Evaluation Metric to judge our 
   It will convert the collection of text tokens in 'text' column, and return a matrix of the counts of occurrences of each token in the Series
   After Vectorizing, we observed the below dataset with mentioned shapes-
 
-  <img src="data_shapes.PNG" width=450 height=150 /> 
+  <img src="data_shapes.PNG" width=400 height=100 /> 
   <br><br>
 
   **3.	Over-Sampling**
